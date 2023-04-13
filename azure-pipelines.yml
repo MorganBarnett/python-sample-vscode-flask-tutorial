@@ -19,6 +19,8 @@ strategy:
     Python37:
       python.version: '3.7'
 
+name: "Legacy_Application_v"$(Date:yyyy_MM_dd)$(Rev:r)
+
 steps:
 - task: UsePythonVersion@0
   inputs:
@@ -34,3 +36,5 @@ steps:
     pip install pytest pytest-azurepipelines
     pytest
   displayName: 'pytest'
+
+- script: echo '$(Build.BuildNumber)' # outputs customized build number like project_def_master_20200828.1
