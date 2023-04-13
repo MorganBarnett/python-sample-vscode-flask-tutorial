@@ -19,7 +19,7 @@ strategy:
     Python37:
       python.version: '3.7'
 
-name: 'Legacy_Application_v $(Date:yyyy_MM_dd)$(Rev:r)'
+name: 'Legacy_Application v$(Date:yyyy_MM_dd).$(Rev:r)'
 
 steps:
 - task: UsePythonVersion@0
